@@ -19,7 +19,16 @@ Testing:
 npx hardhat test tests/chaos.test.js --network chaos
 ```
 
-USDT=0x4dB8F6Fd39b780943F22eb2702BeFab5C13DeB32
-ERC721=0x702DEb044f6f81d9dB7f4Ff23Ae4085b5f2c2273
-ERC20=0xf788324Bb6976fe54Ed49603747109fA96a39e9B
-Raffle=0xE746f66F204121300CeaAc6d5D6C38f809bfD1CE
+# Address of contracts deployed on the Skale
+
+### Raffle
+0x
+
+### USDT
+0x
+
+### ERC721
+0x
+
+### ERC20
+0x
