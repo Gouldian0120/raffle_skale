@@ -7,6 +7,12 @@ cd raffle_skale
 yarn
 ```
 
+Edit .env:
+
+```
+cp .env.example .env
+```
+
 Deploy:
 
 ```
