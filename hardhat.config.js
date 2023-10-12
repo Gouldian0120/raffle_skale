@@ -10,7 +10,6 @@ require("prettier-plugin-solidity");
 
 // here we add or so no error occurs and give clear idea of what is going on
 const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY || "0x";
-const POLYGONSCAN_API_KEY = process.env.POLYGONSCAN_API_KEY || "0x";
 const COINMARKETCAP_API_KEY = process.env.COINMARKETCAP_API_KEY || "0x";
 
 const PRIVATE_KEY = process.env.PRIVATE_KEY;
@@ -98,12 +97,6 @@ module.exports = {
         url: process.env.SKALE_ENDPOINT
       }
     },
-    polygonMumbai: {
-      url: "https://polygon-mumbai.g.alchemy.com/v2/oVz9wUAz6CM7Mc0hBaJ3HAtLmmkvQnrC",
-      chainId: 80001,
-      accounts: [PRIVATE_KEY, PRIVATE_KEY2, PRIVATE_KEY3, PRIVATE_KEY4],
-      timeout: 1000000
-    },
     chaos: {
       accounts: [PRIVATE_KEY, PRIVATE_KEY2, PRIVATE_KEY3, PRIVATE_KEY4],
       chainId: parseInt(process.env.SKALE_CHAIN_ID),
@@ -112,7 +105,6 @@ module.exports = {
   },
   etherscan: {
     apiKey: {
-      polygonMumbai: POLYGONSCAN_API_KEY,
       chaos: ETHERSCAN_API_KEY,
     },
     customChains: [
