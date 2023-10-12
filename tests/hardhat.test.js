@@ -22,24 +22,18 @@ const PVK3 = process.env.PRIVATE_KEY3
 
 describe("Raffle", function () {
   let raffle, usdt_mock_contract, erc20_mock_contract, erc721_mock_contract;
-  let provider;
   let accounts, deployer, player, feeRecipient;
-
-  let raffleAddress = "0x7969c5eD335650692Bc04293B07F5BF2e7A673C0",
-      usdtAddress = "0x4826533B4897376654Bb4d4AD88B7faFD0C98528",
-      erc20Address = "0x8f86403A4DE0BB5791fa46B8e795C547942fE4Cf",
-      erc721Address = "0x0E801D84Fa97b50751Dbf25036d067dCf18858bF"
 
   beforeEach(async () => {
     // await deployments.fixture(); // deploy all contracts
     accounts = await ethers.getSigners();
+    deployer = (await getNamedAccounts()).deployer;
+    
+    raffle = await ethers.getContractAt("Raffle", deployer);
+    usdt_mock_contract = await ethers.getContractAt("USDTMock", deployer);
+    erc20_mock_contract = await ethers.getContractAt("ERC20Mock", deployer);
+    erc721_mock_contract = await ethers.getContract("ERC721Mock", deployer);
 
-    raffle = await ethers.getContractAt("LasmRaffle", raffleAddress);
-    usdt_mock_contract = await ethers.getContractAt("USDTMock", usdtAddress);
-    erc20_mock_contract = await ethers.getContractAt("ERC20Mock", erc20Address);
-    erc721_mock_contract = await ethers.getContractAt("ERC721Mock", erc721Address);
-
-    deployer = accounts[0];
     player = accounts[1];
     feeRecipient = accounts[5];
   });

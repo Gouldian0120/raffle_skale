@@ -30,9 +30,6 @@ async function main() {
   const {deployer} = await getNamedAccounts();
   let usdtAddress = "";
 
-  /**
-   * For test net
-   */
   // Deploy mock usdt
   const usdt_args = ['tUSDT', 'tUSDT', 6];
   

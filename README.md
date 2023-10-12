@@ -1,42 +1,22 @@
-# Hardhat-Fund-me
-
-> Name: Devdeep Shetranjiwala  <br> 
-> Student ID: devdeep0702@gmail.com
+# Raffle contract on the Skale chain
 
 ## Quickstart
 ```
-git clone https://github.com/PatrickAlphaC/hardhat-fund-me-fcc
-cd hardhat-fund-me-fcc
+git clone https://github.com/Gouldian0120/raffle_skale.git
+cd raffle_skale
 yarn
 ```
 
 Deploy:
 
 ```
-yarn hardhat deploy
+npx hardhat run scripts/chaos.deploy.js --network chaos
 ```
 
-## Testing
+Testing:
 
 ```
-yarn hardhat test
-```
-
-### Test Coverage
-
-```
-yarn hardhat coverage
-```
-
-# Deployment to a testnet
-## Estimate gas
-### Estimate gas cost in USD 
-is done in the code. 
-
-# Formatting 
-
-```
-yarn format
+npx hardhat test tests/chaos.test.js --network chaos
 ```
 
 USDT=0x4dB8F6Fd39b780943F22eb2702BeFab5C13DeB32
